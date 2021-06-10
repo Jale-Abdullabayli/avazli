@@ -36,3 +36,13 @@ function setRotation(element, rotationRatio) {
 }
 
 setClock()
+
+
+categories = document.querySelectorAll('.subCategory');
+for (let i = 0; i < categories.length; i++) {
+  categories[i].addEventListener("mouseover", function() {
+        var activeHeader = document.querySelector(".subCategory.active");
+        activeHeader.classList.remove("active");
+        this.classList.add("active");
+    });
+}
