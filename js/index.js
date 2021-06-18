@@ -1,16 +1,27 @@
+AOS.init();
 
-
- AOS.init();
-
-var windowHeight=$(window).height();
+var carouselHeight = $('.carousel').height();
 
 $(window).scroll(function (event) {
-var top =$(window).scrollTop();
-    if (top <= windowHeight) {
-        console.log(top)
-       $('.caption .container').css('transform',`translateY(${top*0.4}px)`)
-    }
+  var top = $(window).scrollTop();
+ 
+  if (top <= carouselHeight) {
+  console.log(top)
+
+    $('.caption .container').css('transform', `translateY(${top*0.4}px)`)
+    $('.navbar').css('box-shadow', 'none');
+
+  }
+  else{
+    $('.navbar').css('box-shadow', '0px 8px 16px 6px #1219261a');
+  }
 })
+
+  if (window.matchMedia('(max-width: 992px)').matches) {
+      $('.navbar-collapse').wrap( "<div class='container'></div>")
+  } else {
+      //...
+  }
 
 
 //clock
@@ -38,11 +49,10 @@ function setRotation(element, rotationRatio) {
 setClock()
 
 
-categories = document.querySelectorAll('.subCategory');
-for (let i = 0; i < categories.length; i++) {
-  categories[i].addEventListener("mouseover", function() {
-        var activeHeader = document.querySelector(".subCategory.active");
-        activeHeader.classList.remove("active");
-        this.classList.add("active");
-    });
-}
+toggle_button = $('.toogle_menu');
+navbar_collapse = $('.navbar-collapse');
+
+toggle_button.click(function () {
+  $(this).toggleClass("open");
+  $(navbar_collapse).toggleClass("open");
+});

@@ -1,9 +1,2 @@
 @font-face{font-family:"Tinos";src:url(tinos-regular.woff2) format("woff2"),url(tinos-regular.woff) format("woff");font-weight:400;font-style:normal;font-display:swap}
 @font-face{font-family:"Tinos";src:url(tinos-bold.woff2) format("woff2"),url(tinos-bold.woff) format("woff");font-weight:700;font-style:normal;font-display:swap}
-@font-face {
-    font-family: azn; 
-    src: url(jaznr.woff) format("woff");
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-};
