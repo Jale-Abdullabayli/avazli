@@ -6,7 +6,7 @@
 }
 
 body {
-  padding-top: 90px;
+  padding-top: 130px;
 }
 
 button {
@@ -311,7 +311,7 @@ button {
   left: 50%;
   top: 50%;
   transform: rotate(-90deg) translate(-50%, -50%);
-  font-size: 34px;
+  font-size: 55px;
   transform-origin: 0 0;
   letter-spacing: 5px;
   text-transform: uppercase;
@@ -429,7 +429,7 @@ button {
   font-size: 14px;
 }
 .products1 .product:hover {
-  border: 2px solid #cc1d1d;
+  border: 2px solid #e4b888;
 }
 .products1 .product h3 {
   font-weight: 400 !important;
@@ -609,23 +609,23 @@ button {
   border: 2px solid white;
 }
 .subCategory .category img {
-  height: 150px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 .subCategory .category button {
-  background: #cc1d1d;
+  background: #9c7e5c;
   margin-top: 30px;
   font-size: 16px;
   border-radius: 4px;
   border: none;
   color: white;
-  padding: 10px 20px;
+  padding: 12px 40px;
 }
 .subCategory .category h3 {
   text-transform: capitalize;
   margin-bottom: 18px;
   color: white;
+  font-size: 24px;
 }
 
 .callToAction {
@@ -655,7 +655,7 @@ button {
 .callToAction button {
   margin-top: 30px;
   font-size: 16px;
-  background-color: #cc1d1e;
+  background-color: #8dc15c;
   border: none;
   padding: 10px 70px;
   border-radius: 4px;
@@ -672,8 +672,21 @@ footer .row h4 {
 footer .row ul {
   list-style-type: none;
 }
-footer .row ul li {
+footer .row ul a {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-decoration: none !important;
+  color: black;
   opacity: 0.7;
+}
+footer .row ul a:hover {
+  opacity: 0.9;
+}
+footer .row ul li {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.2;
@@ -722,6 +735,96 @@ footer .bottomLink {
 }
 footer .bottomLink:hover {
   color: #007bff;
+}
+footer .footerBottom a {
+  color: black;
+  text-decoration: none;
+}
+footer .footerBottom img {
+  width: 100px;
+}
+
+.owl-carousel {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.owl-carousel .owl-nav {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin-top: 0 !important;
+  pointer-events: none;
+}
+
+.owl-carousel .owl-nav .owl-next,
+.owl-carousel .owl-nav .owl-prev {
+  pointer-events: auto;
+  transition: 0.2s ease;
+  margin: 0 !important;
+  width: 10%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.owl-carousel .owl-nav .owl-next:hover span,
+.owl-carousel .owl-nav .owl-prev:hover span {
+  color: white;
+}
+.owl-carousel .owl-nav .owl-next:focus,
+.owl-carousel .owl-nav .owl-prev:focus {
+  outline: none;
+}
+
+.owl-carousel .owl-nav .owl-next span,
+.owl-carousel .owl-nav .owl-prev span {
+  font-size: 100px;
+  color: rgba(255, 255, 255, 0.4);
+  transition: 0.2s ease;
+}
+
+.owl-carousel .owl-nav .owl-prev {
+  left: 0;
+}
+
+.owl-carousel .owl-nav .owl-prev:hover {
+  background: linear-gradient(to left, rgba(255, 0, 0, 0), rgba(0, 0, 0, 0.6)) !important;
+}
+
+.owl-carousel .owl-nav .owl-next {
+  right: 0;
+}
+
+.owl-carousel .owl-nav .owl-next:hover {
+  background: linear-gradient(to right, rgba(255, 0, 0, 0), rgba(0, 0, 0, 0.6)) !important;
+}
+
+.owl-carousel .owl-dot.active span {
+  background-color: #0090d4 !important;
+}
+
+.owl-item img {
+  height: 200px !important;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 0 !important;
+}
+
+.owl-carousel {
+  height: 368px !important;
+}
+
+.owl-dots {
+  display: none;
+  margin-top: 20px;
+}
+
+.owl-stage-outer {
+  height: 100% !important;
 }
 
 @media (min-width: 768px) {

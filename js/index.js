@@ -6,7 +6,6 @@ $(window).scroll(function (event) {
   var top = $(window).scrollTop();
  
   if (top <= carouselHeight) {
-  console.log(top)
 
     $('.caption .container').css('transform', `translateY(${top*0.4}px)`)
     $('.navbar').css('box-shadow', 'none');
@@ -56,3 +55,35 @@ toggle_button.click(function () {
   $(this).toggleClass("open");
   $(navbar_collapse).toggleClass("open");
 });
+
+
+$('.owl-carousel').owlCarousel({
+  loop:true,
+  margin:10,
+  nav:true,
+  responsive:{
+      0:{
+          items:1
+      },
+      600:{
+          items:3
+      },
+      1000:{
+          items:4
+      }
+  }
+})
+
+
+// stop autoplay and start
+
+  $('.owl-nav').on('click', function () {
+     $('.owl-carousel').trigger('stop.owl.autoplay');
+       $('.owl-carousel').trigger('play.owl.autoplay',[5000]);
+  });
+  
+  $('.owl-dot').on('click', function () {
+     $('.owl-carousel').trigger('stop.owl.autoplay');
+       $('.owl-carousel').trigger('play.owl.autoplay',[5000]);
+  });
+  

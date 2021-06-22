@@ -12,7 +12,7 @@ $gray: #d7d5d373;
 
 
 body {
-    padding-top: 90px;
+    padding-top: 130px;
 }
 
 button {
@@ -24,6 +24,7 @@ button {
     border-top: 20px solid $primaryColor;
     background-color: white;
     padding: 5px 1rem !important;
+
     .toogle_menu {
         display: none;
     }
@@ -823,7 +824,7 @@ button {
             left: 50%;
             top: 50%;
             transform: rotate(-90deg) translate(-50%, -50%);
-            font-size: 34px;
+            font-size: 55px;
             transform-origin: 0 0;
             letter-spacing: 5px;
             text-transform: uppercase;
@@ -962,7 +963,7 @@ button {
         }
 
         &:hover {
-            border: 2px solid #cc1d1d;
+            border: 2px solid #e4b888;
         }
 
         h3 {
@@ -1170,24 +1171,24 @@ button {
         }
 
         img {
-            height: 150px;
             object-fit: cover;
         }
 
         button {
-            background: #cc1d1d;
+            background: #9c7e5c;
             margin-top: 30px;
             font-size: 16px;
             border-radius: 4px;
             border: none;
             color: white;
-            padding: 10px 20px;
+            padding: 12px 40px;
         }
 
         h3 {
             text-transform: capitalize;
             margin-bottom: 18px;
             color: white;
+            font-size: 24px;
         }
     }
 }
@@ -1198,18 +1199,19 @@ button {
     padding: $sectionPadding 0;
 
 
-.text{
-    padding: 70px 50px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-    border: 2px solid #e9e9e9;
-    background: linear-gradient(to right, white 20%, transparent), url('../img/callToAction.jpeg');
-    border-radius: 5px;
-    object-fit: cover;
-   
-}
+    .text {
+        padding: 70px 50px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        border: 2px solid #e9e9e9;
+        background: linear-gradient(to right, white 20%, transparent), url('../img/callToAction.jpeg');
+        border-radius: 5px;
+        object-fit: cover;
+
+    }
+
     h2 {
         font-weight: 400 !important;
         font-size: 40px;
@@ -1222,7 +1224,7 @@ button {
     button {
         margin-top: 30px;
         font-size: 16px;
-        background-color: #cc1d1e;
+        background-color: #8dc15c;
         border: none;
         padding: 10px 70px;
         border-radius: 4px;
@@ -1242,8 +1244,18 @@ footer {
         ul {
             list-style-type: none;
 
-            li {
+            a {
+                width: fit-content;
+                text-decoration: none !important;
+                color: black;
                 opacity: .7;
+                &:hover{
+                    opacity: 0.9;
+                }
+            }
+
+            li {
+                width: fit-content;
                 font-size: 16px;
                 font-weight: 400;
                 line-height: 1.2;
@@ -1316,7 +1328,88 @@ footer {
             color: #007bff;
         }
     }
+
+    .footerBottom {
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        img {
+            width: 100px;
+        }
+    }
 }
+
+.owl-carousel {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .owl-carousel .owl-nav {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin-top: 0 !important;
+    pointer-events: none;
+  }
+  .owl-carousel .owl-nav .owl-next,
+  .owl-carousel .owl-nav .owl-prev {
+      pointer-events: auto;
+    transition: 0.2s ease;
+    margin: 0 !important;
+    width: 10%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    &:hover{
+        span{
+            color: white;
+        }
+    }
+    &:focus{
+        outline: none;
+    }
+  }
+  .owl-carousel .owl-nav .owl-next span,
+  .owl-carousel .owl-nav .owl-prev span {
+    font-size: 100px;
+    color: rgba(255, 255, 255, .4);
+transition: 0.2s ease;
+  }
+  .owl-carousel .owl-nav .owl-prev {
+    left: 0;
+  }
+  .owl-carousel .owl-nav .owl-prev:hover {
+    background: linear-gradient(to left, rgba(255, 0, 0, 0), rgba(0, 0, 0, 0.6)) !important;
+  }
+  .owl-carousel .owl-nav .owl-next {
+    right: 0;
+  }
+  .owl-carousel .owl-nav .owl-next:hover {
+    background: linear-gradient(to right, rgba(255, 0, 0, 0), rgba(0, 0, 0, 0.6)) !important;
+  }
+  .owl-carousel .owl-dot.active span {
+    background-color: #0090d4 !important;
+  }
+  .owl-item img{
+      height:200px !important;
+       object-fit: cover;
+       margin:0 !important;
+  }
+  .owl-carousel {
+          height:368px !important;
+  }
+  .owl-dots{
+      display: none;
+     margin-top:20px;
+  }
+  .owl-stage-outer{
+      height: 100% !important;
+  }
 
 @media (min-width: 768px) {
     footer {
@@ -1406,10 +1499,11 @@ footer {
         }
 
     }
+
     .carousel {
 
         .carousel-inner {
-           
+
             .caption {
                 h1 {
                     font-size: 30px;
@@ -1419,21 +1513,24 @@ footer {
                     max-width: 300px;
                     font-size: 16px;
                 }
-                .clock{
+
+                .clock {
                     width: 250px;
                     height: 250px;
+
                     .number {
                         font-size: 20px;
                     }
                 }
+
                 .clock .hand.second {
                     height: 40%;
                 }
-    
+
                 .clock .hand.minute {
                     height: 35%;
                 }
-    
+
                 .clock .hand.hour {
                     height: 30%;
                 }
@@ -1441,6 +1538,7 @@ footer {
         }
     }
 }
+
 @media only screen and (max-width: 768px) {
     .carousel {
         height: 400px;
@@ -1466,16 +1564,20 @@ footer {
             }
         }
     }
-    .categories{
+
+    .categories {
         .category {
-            height: 300px;}
-    
+            height: 300px;
+        }
+
     }
-    .callToAction{
-        .text{
+
+    .callToAction {
+        .text {
             padding: 40px 30px;
         }
-        h2{
+
+        h2 {
             font-size: 30px;
         }
     }
